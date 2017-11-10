@@ -19,6 +19,7 @@ class AlamofireSessionManager:  NetworkSessionManager {
     override func currentHeaderForRequest() -> [String : String] {
         return super.currentHeaderForRequest()
     }
+    
 }
 class AlamofireAPIWrapper: NetworkWrapper {
     

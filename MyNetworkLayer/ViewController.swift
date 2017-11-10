@@ -7,13 +7,9 @@
 //
 
 import UIKit
-internal let kOriginIPAddress = "origin_ip_address"
-internal let kResponseStatus = "status"
-internal let kResponseSuccessStatus = "success"
-internal let kResponseData = "data"
+
 internal let kAuthorizationToken = "authorizationToken"
-internal let kSecurityGuard = "security_guard"
-internal let kSecurityKey = "113113"
+
 class ViewController: UIViewController {
 
     

@@ -52,7 +52,6 @@ class DataManager {
                 newParamters.updateValue(parameters[key]!, forKey: key)
             }
         }
-        newParamters[kSecurityGuard] = kSecurityKey as AnyObject
         return newParamters
     }
     
