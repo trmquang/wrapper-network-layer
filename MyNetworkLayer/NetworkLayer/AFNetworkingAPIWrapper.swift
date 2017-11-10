@@ -13,9 +13,6 @@ class AFNetworkingSessionManager:  NetworkSessionManager {
         let sessionManager = AFHTTPSessionManager()
         
         sessionManager.requestSerializer = AFJSONRequestSerializer()
-        for (key, value) in self.currentHeaderForRequest() {
-            sessionManager.requestSerializer.setValue(value, forHTTPHeaderField: key)
-        }
         
         sessionManager.responseSerializer = AFJSONResponseSerializer()
         
@@ -27,9 +24,7 @@ class AFNetworkingSessionManager:  NetworkSessionManager {
         sessionManager.requestSerializer.timeoutInterval = 30
         return sessionManager
     }
-    override func currentHeaderForRequest() -> [String : String] {
-        return super.currentHeaderForRequest()
-    }
+    
 }
 class AFNetworkingAPIWrapper: NetworkWrapper {
     func completionHandleData(response: Any, dataType: DataType, completionHandler: @escaping NetworkCompletionHandler) {

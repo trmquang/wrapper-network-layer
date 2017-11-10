@@ -11,14 +11,11 @@ import Alamofire
 class AlamofireSessionManager:  NetworkSessionManager {
     override func createSession() -> AnyObject {
         let manager = Alamofire.SessionManager.default
-        manager.session.configuration.httpAdditionalHeaders = self.currentHeaderForRequest()
         manager.session.configuration.timeoutIntervalForRequest = 30
         manager.session.configuration.allowsCellularAccess = true
         return manager
     }
-    override func currentHeaderForRequest() -> [String : String] {
-        return super.currentHeaderForRequest()
-    }
+    
     
 }
 class AlamofireAPIWrapper: NetworkWrapper {

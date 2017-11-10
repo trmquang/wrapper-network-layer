@@ -18,21 +18,5 @@ class NetworkSessionManager {
        return "Not Implemented" as AnyObject
     }
     
-    func currentHeaderForRequest() -> [String: String] {
-        let header: [String:String] = [:]
-        
-        return header
-    }
-    func createParameters(_ parameters: [String: AnyObject]?) -> [String: AnyObject] {
-        var newParamters: [String: AnyObject] = [:]
-        if let parameters = parameters {
-            let keys = parameters.keys
-            for key in keys {
-                newParamters.updateValue(parameters[key]!, forKey: key)
-            }
-        }
-        
-        return newParamters
-    }
     
 }
