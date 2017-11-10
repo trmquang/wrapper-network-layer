@@ -23,7 +23,7 @@ class AlamofireSessionManager:  NetworkSessionManager {
 }
 class AlamofireAPIWrapper: NetworkWrapper {
     
-    var sessionManager: NetworkSessionManager = AlamofireSessionManager.shared
+    var sessionManager: NetworkSessionManager = AlamofireSessionManager()
     var delegate: NetworkWrapperDelegate?
     func request(requestType: RequestTaskType, requestURLString: String, parameters: [String : AnyObject]?, additionalHeaders: [String : String]?, forAuthenticate: Bool, completionHandler: @escaping NetworkCompletionHandler) {
         let session = sessionManager.session as! SessionManager

@@ -9,14 +9,9 @@
 import Foundation
 
 class NetworkSessionManager {
-    class var shared: NetworkSessionManager {
-        struct SingletonWrapper {
-            static var instance = NetworkSessionManager.init()
-        }
-        return SingletonWrapper.instance
-    }
+   
     var session: AnyObject!
-    private init () {
+    init () {
         session = createSession()
     }
     func createSession() -> AnyObject {

@@ -82,7 +82,7 @@ class AFNetworkingAPIWrapper: NetworkWrapper {
         }
     }
     
-    var sessionManager: NetworkSessionManager = AFNetworkingSessionManager.shared
+    var sessionManager: NetworkSessionManager = AFNetworkingSessionManager()
     var delegate: NetworkWrapperDelegate?
 
     
